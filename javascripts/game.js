@@ -1691,6 +1691,7 @@ function bigCrunchButtonUpdating(){
 
 function nextICUnlockUpdating(){
 	var nextUnlock = getNextAt(order[player.postChallUnlocked])
+	el("nextchall").style.display = hasAch("r51") ? null : "none"
 	if (nextUnlock == undefined) el("nextchall").textContent = " "
 	else if (!hasAch("r133")) {
 		el("nextchall").textContent = "Next challenge unlocks at "+ shortenCosts(nextUnlock) + " antimatter."
